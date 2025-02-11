@@ -8,26 +8,43 @@ public class Utility
 {
     public static ArrayList<Student> sortStudents(ArrayList<Student> list)
     {
-        list.sort((one, two) ->
+        for (int i = 0; i < list.size()-1; i++)
         {
-            int lastNameCompare = one.getLastName().compareTo(two.getLastName());
-                
-            if (lastNameCompare != 0) 
+            for (int j = 0; j < list.size()-i-1; j++)
             {
-                return lastNameCompare;
+                Student one = list.get(j);
+                Student two = list.get(j + 1);
+              
+                int compareLast = one.getLastName().compareTo(two.getLastName());
+   
+   
+                if (compareLast == 0)
+                {
+                  int compareFirst = one.getFirstName().compareTo(two.getFirstName());
+                  
+                  if (compareFirst == 0)
+                  {
+   
+                      if (one.getGpa() < (two.getGpa()))
+                      {
+                          list.set(j, two);
+                          list.set(j + 1, one);
+                      }
+                  }
+                  else if (compareFirst > 0)
+                  {
+                      list.set(j, two);
+                      list.set(j + 1, one);
+                  }
+                }
+                else if (compareLast > 0)
+                {
+                  list.set(j, two);
+                  list.set(j + 1, one);
+                }
             }
-                
-            int firstNameCompare = one.getFirstName().compareTo(two.getFirstName());
-
-            if (firstNameCompare != 0)
-            {
-                return firstNameCompare;
-            }
-
-            return Double.compare(two.getGpa(), one.getGpa());
-        });
-
-        return list;
+        }
+          return list;
     }
 
     public static void main(String[] args)
