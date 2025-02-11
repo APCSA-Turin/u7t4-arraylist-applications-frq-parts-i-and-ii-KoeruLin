@@ -3,10 +3,17 @@ package com.example.project.WordPair;
 import java.util.ArrayList;
 
 public class WordPairList {
-    private ArrayList<WordPair> allPairs;
+    private ArrayList<WordPair> allPairs = new ArrayList<>();
 
-    public WordPairList(String[] words) {
-        /* to be implemented in part (a) */
+    public WordPairList(String[] words) 
+    {
+        for (int i = 0; i < words.length; i++)
+        {
+            for (int j = i + 1; j < words.length; j++)
+            {
+                allPairs.add(new WordPair(words[i], words[j]));
+            }
+        }
     }
 
     // The method below was added for testing;
@@ -15,9 +22,17 @@ public class WordPairList {
         return allPairs;
     }
 
-    public int numMatches() {
-        /* to be implemented in part (b) */
-        return 0;
+    public int numMatches() 
+    {
+        int count = 0;
+        
+        for (WordPair pair : allPairs)
+        {
+            if (pair.getFirst().equals(pair.getSecond()))
+                count++;
+        }
+
+        return count;
     }
 
     // The method below was added for testing;
