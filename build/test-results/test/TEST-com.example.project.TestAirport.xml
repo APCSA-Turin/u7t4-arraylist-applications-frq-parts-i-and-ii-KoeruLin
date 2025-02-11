@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestAirport" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-02-11T13:39:51" hostname="codespaces-14ce3c" time="0.008">
+<testsuite name="com.example.project.TestAirport" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-02-11T16:20:14" hostname="codespaces-14ce3c" time="0.037">
   <properties/>
-  <testcase name="testUpdateAllFlights()" classname="com.example.project.TestAirport" time="0.001"/>
+  <testcase name="testUpdateAllFlights()" classname="com.example.project.TestAirport" time="0.025"/>
   <testcase name="testRevenuePARTA()" classname="com.example.project.TestAirport" time="0.001"/>
-  <testcase name="testUpdateFlightsPARTB()" classname="com.example.project.TestAirport" time="0.002"/>
+  <testcase name="testUpdateFlightsPARTB()" classname="com.example.project.TestAirport" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

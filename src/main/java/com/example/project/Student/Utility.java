@@ -6,7 +6,6 @@ import java.util.Comparator;
 
 public class Utility 
 {
-
     public static ArrayList<Student> sortStudents(ArrayList<Student> list)
     {
         list.sort((one, two) ->
